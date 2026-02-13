@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html><head><title>Regis - Tesla Auth</title></head>
+<body>
+<h1>Regis Tesla Auth</h1>
+<p>Authorization callback handler.</p>
+<script>
+const params = new URLSearchParams(window.location.search);
+const code = params.get('code');
+if (code) {
+  document.body.innerHTML = '<h1>Auth Code:</h1><pre style="font-size:24px;padding:20px;background:#eee;">' + code + '</pre><p>Copy this code and send it to Regis on Telegram.</p>';
+}
+</script>
+</body></html>
